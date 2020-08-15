@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="GraphQL" Version="2.4.0" />
+      <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="3.4.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.2" />
+      <PackageReference Include="RabbitMQ.Client" Version="6.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HouseHub.Web.UserApi.Core\HouseHub.Web.UserApi.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Rabbit\Processors" />
+      <Folder Include="Repositories\Implementations" />
+    </ItemGroup>
+
+</Project>

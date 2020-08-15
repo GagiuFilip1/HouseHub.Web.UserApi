@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="GraphQl\InputObjects\Planet" />
+      <Folder Include="GraphQl\InputObjects\SolarSystem" />
+      <Folder Include="GraphQl\OutputObjects" />
+      <Folder Include="Models\Entities" />
+      <Folder Include="Models\Filters\Implementations" />
+      <Folder Include="Repositories\Interfaces" />
+      <Folder Include="Services\Implementations" />
+      <Folder Include="Services\Interfaces" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="GraphQL" Version="2.4.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
+      <PackageReference Include="RabbitMQ.Client" Version="6.1.0" />
+      <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseHub.Web.UserApi.Presentation", "HouseHub.Web.UserApi.Presentation\HouseHub.Web.UserApi.Presentation.csproj", "{46E85A65-F882-41BC-8682-FA5DCCDF00CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseHub.Web.UserApi.Infrastructure", "HouseHub.Web.UserApi.Infrastructure\HouseHub.Web.UserApi.Infrastructure.csproj", "{DF750125-9B06-4B14-BDED-F220AC428499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseHub.Web.UserApi.Core", "HouseHub.Web.UserApi.Core\HouseHub.Web.UserApi.Core.csproj", "{702E96CD-1E86-4855-8DCC-A9E0F967F2E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46E85A65-F882-41BC-8682-FA5DCCDF00CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E85A65-F882-41BC-8682-FA5DCCDF00CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E85A65-F882-41BC-8682-FA5DCCDF00CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E85A65-F882-41BC-8682-FA5DCCDF00CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF750125-9B06-4B14-BDED-F220AC428499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF750125-9B06-4B14-BDED-F220AC428499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF750125-9B06-4B14-BDED-F220AC428499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF750125-9B06-4B14-BDED-F220AC428499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{702E96CD-1E86-4855-8DCC-A9E0F967F2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{702E96CD-1E86-4855-8DCC-A9E0F967F2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{702E96CD-1E86-4855-8DCC-A9E0F967F2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{702E96CD-1E86-4855-8DCC-A9E0F967F2E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

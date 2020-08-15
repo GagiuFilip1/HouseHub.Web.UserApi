@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="GraphQL" Version="2.4.0" />
+      <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="3.4.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
+      <PackageReference Include="NLog" Version="4.7.3" />
+      <PackageReference Include="NLog.Schema" Version="4.7.3" />
+      <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="GraphQl\Mutations" />
+      <Folder Include="GraphQl\Queries" />
+      <Folder Include="GraphQl\Schemas" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HouseHub.Web.UserApi.Core\HouseHub.Web.UserApi.Core.csproj" />
+      <ProjectReference Include="..\HouseHub.Web.UserApi.Infrastructure\HouseHub.Web.UserApi.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
