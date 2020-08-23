@@ -8,7 +8,6 @@
       <Folder Include="GraphQl\InputObjects\Planet" />
       <Folder Include="GraphQl\InputObjects\SolarSystem" />
       <Folder Include="GraphQl\OutputObjects" />
-      <Folder Include="Models\Entities" />
       <Folder Include="Models\Filters\Implementations" />
       <Folder Include="Repositories\Interfaces" />
       <Folder Include="Services\Implementations" />

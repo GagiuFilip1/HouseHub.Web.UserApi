@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace HouseHub.Web.UserApi.Core.Models.Interfaces.Commons
 {
