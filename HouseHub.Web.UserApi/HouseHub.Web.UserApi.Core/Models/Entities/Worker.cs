@@ -6,9 +6,8 @@ namespace HouseHub.Web.UserApi.Core.Models.Entities
     public class Worker : Account
     {
         public int CompletedJobs { get; set; }
-        public Guid DomainId { get; set; }
 
-        public Domain Domain { get; set; }
+        public List<Domain> Domains { get; set; }
 
         public new List<string> Validate()
         {

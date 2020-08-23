@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace HouseHub.Web.UserApi.Core.Models.Entities
 {
@@ -6,6 +7,6 @@ namespace HouseHub.Web.UserApi.Core.Models.Entities
     {
         public Guid LocationId { get; set; }
 
-        public Location Location { get; set; }
+        public List<Location> Locations { get; set; }
     }
 }

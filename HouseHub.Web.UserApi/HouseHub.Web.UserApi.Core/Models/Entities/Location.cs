@@ -11,6 +11,9 @@ namespace HouseHub.Web.UserApi.Core.Models.Entities
         public Guid Id { get; set; }
         [Column(TypeName = "varchar(128)")] public string StreetAddress { get; set; }
         [Column(TypeName = "varchar(16)")] public string PostalNumber { get; set; }
+        public Guid CustomerId { get; set; }
+
+        public Customer Customer { get; set; }
 
         public List<string> Validate()
         {

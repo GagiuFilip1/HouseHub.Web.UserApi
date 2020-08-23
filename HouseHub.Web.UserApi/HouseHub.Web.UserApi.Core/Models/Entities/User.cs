@@ -17,6 +17,7 @@ namespace HouseHub.Web.UserApi.Core.Models.Entities
 
         public DateTime RegisteredAt { get; set; }
         [Column(TypeName = "varchar(2048)")] public Uri ProfileUrl { get; set; }
+        public List<Account> Accounts { get; set; }
 
         public async Task<List<string>> ValidateAsync()
         {

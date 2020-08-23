@@ -11,7 +11,8 @@ namespace HouseHub.Web.UserApi.Core.Models.Entities
         public Guid Id { get; set; }
         [Column(TypeName = "varchar(128)")] public string Name { get; set; }
         public int YearsOfExperience { get; set; }
-
+        public Worker Worker { get; set; }
+        public Guid WorkerId { get; set; }
         public List<string> Validate()
         {
             var errors = new List<string>();

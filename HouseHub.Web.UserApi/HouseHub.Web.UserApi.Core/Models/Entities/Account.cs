@@ -10,7 +10,7 @@ namespace HouseHub.Web.UserApi.Core.Models.Entities
     public abstract class Account : IValidEntity, IIdentifier
     {
         public Guid Id { get; set; }
-        public AccountType AccountType { get; set; }
+        public AccountType Type { get; set; }
         [Column(TypeName = "smallint unsigned")] public float Rating { get; set; }
         public Guid UserId { get; set; }
         public User User { get; set; }
