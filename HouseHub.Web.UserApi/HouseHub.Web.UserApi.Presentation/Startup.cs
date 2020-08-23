@@ -12,10 +12,10 @@ namespace HouseHub.Web.UserApi.Presentation
 {
     public class Startup
     {
-        private const string CONNECTION_STRING_PATH = "ConnectionStrings:SolarisApi";
-        private const string MIGRATION_ASSEMBLY = "Solaris.Web.SolarApi.Presentation";
-        private const string REPOSITORIES_NAMESPACE = "Solaris.Web.SolarApi.Infrastructure.Repositories.Implementations";
-        private const string SERVICES_NAMESPACE = "Solaris.Web.SolarApi.Core.Services.Implementations";
+        private const string CONNECTION_STRING_PATH = "ConnectionStrings:UserApi";
+        private const string MIGRATION_ASSEMBLY = "HouseHub.Web.UserApi.Presentation";
+        private const string REPOSITORIES_NAMESPACE = "HouseHub.Web.UserApi.Infrastructure.Repositories.Implementations";
+        private const string SERVICES_NAMESPACE = "HouseHub.Web.UserApi.Core.Services.Implementations";
 
         public Startup(IConfiguration configuration)
         {

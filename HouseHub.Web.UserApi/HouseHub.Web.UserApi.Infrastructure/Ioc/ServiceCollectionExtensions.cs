@@ -20,7 +20,7 @@ namespace HouseHub.Web.UserApi.Infrastructure.Ioc
 {
     public static class ServiceCollectionExtensions
     {
-        private const string SOLUTION_NAME = "Solaris";
+        private const string SOLUTION_NAME = "HouseHub";
 
         static ServiceCollectionExtensions()
         {
@@ -99,16 +99,16 @@ namespace HouseHub.Web.UserApi.Infrastructure.Ioc
 
         public static void InjectRabbitMq(this IServiceCollection collection)
         {
-            var assembly = Assembly.Load("Solaris.Web.SolarApi.Infrastructure");
-            assembly.GetTypesForPath("Solaris.Web.SolarApi.Infrastructure.Rabbit").Select(t => t.UnderlyingSystemType).ToList().ForEach(RegisterType);
+            var assembly = Assembly.Load("HouseHub.Web.UserApi.Infrastructure");
+            assembly.GetTypesForPath("HouseHub.Web.UserApi.Infrastructure.Rabbit").Select(t => t.UnderlyingSystemType).ToList().ForEach(RegisterType);
             collection.BuildServiceProvider().GetRequiredService<RabbitWrapper>();
         }
 
         public static void InjectGraphQl(this IServiceCollection collection)
         {
-            InjectForNamespace(collection, "Solaris.Web.SolarApi.Presentation.GraphQl.Schemas");
-            InjectForNamespace(collection, "Solaris.Web.SolarApi.Presentation.GraphQl.Queries");
-            InjectForNamespace(collection, "Solaris.Web.SolarApi.Presentation.GraphQl.Mutations");
+            InjectForNamespace(collection, "HouseHub.Web.UserApi.Presentation.GraphQl.Schemas");
+            InjectForNamespace(collection, "HouseHub.Web.UserApi.Presentation.GraphQl.Queries");
+            InjectForNamespace(collection, "HouseHub.Web.UserApi.Presentation.GraphQl.Mutations");
 
             collection.AddScoped<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));
             collection.AddScoped<RootSchema>();
@@ -119,20 +119,20 @@ namespace HouseHub.Web.UserApi.Infrastructure.Ioc
             collection.AddScoped<UriGraphType>();
             collection.AddScoped<EnumerationGraphType<OrderDirection>>();
 
-            var coreAssembly = Assembly.Load("Solaris.Web.SolarApi.Core");
+            var coreAssembly = Assembly.Load("HouseHub.Web.UserApi.Core");
 
-            coreAssembly.GetTypesForPath("Solaris.Web.SolarApi.Core.GraphQl.Helpers").ForEach(p =>
+            coreAssembly.GetTypesForPath("HouseHub.Web.UserApi.Core.GraphQl.Helpers").ForEach(p =>
             {
                 RuntimeHelpers.RunClassConstructor(p.TypeHandle);
                 collection.AddScoped(p.UnderlyingSystemType);
             });
 
-            coreAssembly.GetTypesForPath("Solaris.Web.SolarApi.Core.GraphQl.InputObjects").ForEach(p => { collection.AddScoped(p.UnderlyingSystemType); });
+            coreAssembly.GetTypesForPath("HouseHub.Web.UserApi.Core.GraphQl.InputObjects").ForEach(p => { collection.AddScoped(p.UnderlyingSystemType); });
 
-            coreAssembly.GetTypesForPath("Solaris.Web.SolarApi.Core.GraphQl.OutputObjects").ForEach(p => { collection.AddScoped(p.UnderlyingSystemType); });
+            coreAssembly.GetTypesForPath("HouseHub.Web.UserApi.Core.GraphQl.OutputObjects").ForEach(p => { collection.AddScoped(p.UnderlyingSystemType); });
 
             var enumGraphType = typeof(EnumerationGraphType<>);
-            coreAssembly.GetEnumsForPath("Solaris.Web.SolarApi.Core.Enums").ForEach(p =>
+            coreAssembly.GetEnumsForPath("HouseHub.Web.UserApi.Core.Enums").ForEach(p =>
             {
                 collection.AddSingleton(enumGraphType.MakeGenericType(p));
                 GraphTypeTypeRegistry.Register(p, enumGraphType.MakeGenericType(p));
